@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.company.test2.web.korrespondent.KorrespondentEdit"
+        datasource="korrespondentDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.test2.web.korrespondent">
+    <dsContext>
+        <datasource id="korrespondentDs"
+                    class="com.company.test2.entity.Korrespondent"
+                    view="_local"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions" spacing="true">
+        <fieldGroup id="fieldGroup" datasource="korrespondentDs">
+            <column width="250px">
+                <field property="adres"/>
+                <field property="datasetNo"/>
+                <field property="faks"/>
+                <field property="namo"/>
+                <field property="region"/>
+                <field property="telefon"/>
+                <field property="versionNo"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

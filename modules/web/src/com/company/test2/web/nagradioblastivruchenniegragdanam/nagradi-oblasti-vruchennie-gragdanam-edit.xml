@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.company.test2.web.nagradioblastivruchenniegragdanam.NagradiOblastiVruchennieGragdanamEdit"
+        datasource="nagradiOblastiVruchennieGragdanamDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.test2.web.nagradioblastivruchenniegragdanam">
+    <dsContext>
+        <datasource id="nagradiOblastiVruchennieGragdanamDs"
+                    class="com.company.test2.entity.NagradiOblastiVruchennieGragdanam"
+                    view="_local"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions" spacing="true">
+        <fieldGroup id="fieldGroup" datasource="nagradiOblastiVruchennieGragdanamDs">
+            <column width="250px">
+                <field property="dataPostanovleniya"/>
+                <field property="dataVrucheniyaNagradi"/>
+                <field property="datasetNo"/>
+                <field property="dolgnost"/>
+                <field property="familiya"/>
+                <field property="mestoRabotiTogda"/>
+                <field property="nomerPostanovleniya"/>
+                <field property="obektVrucheniya"/>
+                <field property="versionNo"/>
+                <field property="zaslugi"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

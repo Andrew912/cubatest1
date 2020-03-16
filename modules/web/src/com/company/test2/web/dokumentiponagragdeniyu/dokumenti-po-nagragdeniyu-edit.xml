@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.company.test2.web.dokumentiponagragdeniyu.DokumentiPoNagragdeniyuEdit"
+        datasource="dokumentiPoNagragdeniyuDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.test2.web.dokumentiponagragdeniyu">
+    <dsContext>
+        <datasource id="dokumentiPoNagragdeniyuDs"
+                    class="com.company.test2.entity.DokumentiPoNagragdeniyu"
+                    view="_local"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="scrollBox" spacing="true">
+        <scrollBox id="scrollBox" spacing="true">
+            <fieldGroup id="fieldGroup" datasource="dokumentiPoNagragdeniyuDs">
+                <column width="250px">
+                    <field property="adresatIskhodyashego"/>
+                    <field property="dataDokumentaONagragdenii"/>
+                    <field property="dataIskhodyashego"/>
+                    <field property="dataPodpisaniyaGubernatorom"/>
+                    <field property="dataPostanovleniyaOms"/>
+                    <field property="dataRassmotreniyaKomissiey"/>
+                    <field property="dataSoprovoditelnogoPisma"/>
+                    <field property="dataVozvrataIzPodrazdeleniy"/>
+                    <field property="dataVrucheniyaNagradi"/>
+                    <field property="datasetNo"/>
+                    <field property="dopolnitelniyNomer"/>
+                    <field property="dopolnitelniySrokIspolneniya"/>
+                    <field property="ispolnitel"/>
+                    <field property="nagragdaemiy"/>
+                    <field property="nomerDokumentaONagragdenii"/>
+                    <field property="nomerIskhodyashego"/>
+                    <field property="nomerPostanovleniyaOms"/>
+                    <field property="nomerSoprovoditelnogoPisma"/>
+                    <field property="otkaz"/>
+                    <field property="podpisavshiySoprovoditelnoePismo"/>
+                    <field property="primechanie"/>
+                    <field property="primechanieIskhodyashego"/>
+                    <field property="reshenieKomissii"/>
+                    <field property="soderganie"/>
+                    <field property="srokIspolneniya"/>
+                    <field property="versionNo"/>
+                    <field property="vkhodyashayaData"/>
+                    <field property="vkhodyashiyNomer"/>
+                    <field property="zaslugi"/>
+                </column>
+            </fieldGroup>
+        </scrollBox>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.test2.web.prinadlegnostnagradi.PrinadlegnostNagradiBrowse"
+        focusComponent="prinadlegnostNagradisTable"
+        lookupComponent="prinadlegnostNagradisTable"
+        messagesPack="com.company.test2.web.prinadlegnostnagradi">
+    <dsContext>
+        <collectionDatasource id="prinadlegnostNagradisDs"
+                              class="com.company.test2.entity.PrinadlegnostNagradi"
+                              view="_local">
+            <query>
+                <![CDATA[select e from test2_PrinadlegnostNagradi e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="prinadlegnostNagradisTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="prinadlegnostNagradisTable"
+                datasource="prinadlegnostNagradisDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="prinadlegnostNagradisTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="datasetNo"/>
+                <column id="namo"/>
+                <column id="versionNo"/>
+            </columns>
+            <rows datasource="prinadlegnostNagradisDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="prinadlegnostNagradisTable.create"/>
+                <button id="editBtn" action="prinadlegnostNagradisTable.edit"/>
+                <button id="removeBtn" action="prinadlegnostNagradisTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

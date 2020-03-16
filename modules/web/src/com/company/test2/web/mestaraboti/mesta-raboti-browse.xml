@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.test2.web.mestaraboti.MestaRabotiBrowse"
+        focusComponent="mestaRabotisTable"
+        lookupComponent="mestaRabotisTable"
+        messagesPack="com.company.test2.web.mestaraboti">
+    <dsContext>
+        <collectionDatasource id="mestaRabotisDs"
+                              class="com.company.test2.entity.MestaRaboti"
+                              view="_local">
+            <query>
+                <![CDATA[select e from test2_MestaRaboti e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="mestaRabotisTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="mestaRabotisTable"
+                datasource="mestaRabotisDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="mestaRabotisTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="datasetNo"/>
+                <column id="namo"/>
+                <column id="versionNo"/>
+            </columns>
+            <rows datasource="mestaRabotisDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="mestaRabotisTable.create"/>
+                <button id="editBtn" action="mestaRabotisTable.edit"/>
+                <button id="removeBtn" action="mestaRabotisTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

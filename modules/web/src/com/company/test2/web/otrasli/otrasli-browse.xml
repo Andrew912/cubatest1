@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.test2.web.otrasli.OtrasliBrowse"
+        focusComponent="otraslisTable"
+        lookupComponent="otraslisTable"
+        messagesPack="com.company.test2.web.otrasli">
+    <dsContext>
+        <collectionDatasource id="otraslisDs"
+                              class="com.company.test2.entity.Otrasli"
+                              view="_local">
+            <query>
+                <![CDATA[select e from test2_Otrasli e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="otraslisTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="otraslisTable"
+                datasource="otraslisDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="otraslisTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="datasetNo"/>
+                <column id="namo"/>
+                <column id="versionNo"/>
+            </columns>
+            <rows datasource="otraslisDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="otraslisTable.create"/>
+                <button id="editBtn" action="otraslisTable.edit"/>
+                <button id="removeBtn" action="otraslisTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.test2.web.nagradi.NagradiBrowse"
+        focusComponent="nagradisTable"
+        lookupComponent="nagradisTable"
+        messagesPack="com.company.test2.web.nagradi">
+    <dsContext>
+        <collectionDatasource id="nagradisDs"
+                              class="com.company.test2.entity.Nagradi"
+                              view="_local">
+            <query>
+                <![CDATA[select e from test2_Nagradi e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="nagradisTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="nagradisTable"
+                datasource="nagradisDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="nagradisTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="datasetNo"/>
+                <column id="namo"/>
+                <column id="versionNo"/>
+            </columns>
+            <rows datasource="nagradisDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="nagradisTable.create"/>
+                <button id="editBtn" action="nagradisTable.edit"/>
+                <button id="removeBtn" action="nagradisTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

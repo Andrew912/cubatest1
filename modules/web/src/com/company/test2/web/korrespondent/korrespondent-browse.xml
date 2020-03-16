@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.test2.web.korrespondent.KorrespondentBrowse"
+        focusComponent="korrespondentsTable"
+        lookupComponent="korrespondentsTable"
+        messagesPack="com.company.test2.web.korrespondent">
+    <dsContext>
+        <collectionDatasource id="korrespondentsDs"
+                              class="com.company.test2.entity.Korrespondent"
+                              view="_local">
+            <query>
+                <![CDATA[select e from test2_Korrespondent e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="korrespondentsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="korrespondentsTable"
+                datasource="korrespondentsDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="korrespondentsTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="adres"/>
+                <column id="datasetNo"/>
+                <column id="faks"/>
+                <column id="namo"/>
+                <column id="region"/>
+                <column id="telefon"/>
+                <column id="versionNo"/>
+            </columns>
+            <rows datasource="korrespondentsDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="korrespondentsTable.create"/>
+                <button id="editBtn" action="korrespondentsTable.edit"/>
+                <button id="removeBtn" action="korrespondentsTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

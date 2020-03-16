@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
+
+    <screen id="test2_KategoriiRabotnikov.browse"
+            template="com/company/test2/web/kategoriirabotnikov/kategorii-rabotnikov-browse.xml"/>
+    <screen id="test2_KategoriiRabotnikov.edit"
+            template="com/company/test2/web/kategoriirabotnikov/kategorii-rabotnikov-edit.xml"/>
+    <screen id="test2_Obrazovanie.browse" template="com/company/test2/web/obrazovanie/obrazovanie-browse.xml"/>
+    <screen id="test2_Obrazovanie.edit" template="com/company/test2/web/obrazovanie/obrazovanie-edit.xml"/>
+    <screen id="test2_TipiNagrad.browse" template="com/company/test2/web/tipinagrad/tipi-nagrad-browse.xml"/>
+    <screen id="test2_TipiNagrad.edit" template="com/company/test2/web/tipinagrad/tipi-nagrad-edit.xml"/>
+    <screen id="test2_Korrespondent.browse" template="com/company/test2/web/korrespondent/korrespondent-browse.xml"/>
+    <screen id="test2_Korrespondent.edit" template="com/company/test2/web/korrespondent/korrespondent-edit.xml"/>
+    <screen id="test2_VidiDokumentov.browse"
+            template="com/company/test2/web/vididokumentov/vidi-dokumentov-browse.xml"/>
+    <screen id="test2_VidiDokumentov.edit" template="com/company/test2/web/vididokumentov/vidi-dokumentov-edit.xml"/>
+    <screen id="test2_NagradiOblastiVruchennieGragdanam.browse"
+            template="com/company/test2/web/nagradioblastivruchenniegragdanam/nagradi-oblasti-vruchennie-gragdanam-browse.xml"/>
+    <screen id="test2_NagradiOblastiVruchennieGragdanam.edit"
+            template="com/company/test2/web/nagradioblastivruchenniegragdanam/nagradi-oblasti-vruchennie-gragdanam-edit.xml"/>
+    <screen id="test2_Otchestva.browse" template="com/company/test2/web/otchestva/otchestva-browse.xml"/>
+    <screen id="test2_Otchestva.edit" template="com/company/test2/web/otchestva/otchestva-edit.xml"/>
+    <screen id="test2_Territoriya.browse" template="com/company/test2/web/territoriya/territoriya-browse.xml"/>
+    <screen id="test2_Territoriya.edit" template="com/company/test2/web/territoriya/territoriya-edit.xml"/>
+    <screen id="test2_PredstavlyayushieKNagrade.browse"
+            template="com/company/test2/web/predstavlyayushieknagrade/predstavlyayushie-k-nagrade-browse.xml"/>
+    <screen id="test2_PredstavlyayushieKNagrade.edit"
+            template="com/company/test2/web/predstavlyayushieknagrade/predstavlyayushie-k-nagrade-edit.xml"/>
+    <screen id="test2_VruchayushieNagradi.browse"
+            template="com/company/test2/web/vruchayushienagradi/vruchayushie-nagradi-browse.xml"/>
+    <screen id="test2_VruchayushieNagradi.edit"
+            template="com/company/test2/web/vruchayushienagradi/vruchayushie-nagradi-edit.xml"/>
+    <screen id="test2_MestaVrucheniya.browse"
+            template="com/company/test2/web/mestavrucheniya/mesta-vrucheniya-browse.xml"/>
+    <screen id="test2_MestaVrucheniya.edit" template="com/company/test2/web/mestavrucheniya/mesta-vrucheniya-edit.xml"/>
+    <screen id="test2_Imena.browse" template="com/company/test2/web/imena/imena-browse.xml"/>
+    <screen id="test2_Imena.edit" template="com/company/test2/web/imena/imena-edit.xml"/>
+    <screen id="test2_TipiNagragdaemikh.browse"
+            template="com/company/test2/web/tipinagragdaemikh/tipi-nagragdaemikh-browse.xml"/>
+    <screen id="test2_TipiNagragdaemikh.edit"
+            template="com/company/test2/web/tipinagragdaemikh/tipi-nagragdaemikh-edit.xml"/>
+    <screen id="test2_Nagradi.browse" template="com/company/test2/web/nagradi/nagradi-browse.xml"/>
+    <screen id="test2_Nagradi.edit" template="com/company/test2/web/nagradi/nagradi-edit.xml"/>
+    <screen id="test2_Rezolyucii.browse" template="com/company/test2/web/rezolyucii/rezolyucii-browse.xml"/>
+    <screen id="test2_Rezolyucii.edit" template="com/company/test2/web/rezolyucii/rezolyucii-edit.xml"/>
+    <screen id="test2_SferaDeyatelnosti.browse"
+            template="com/company/test2/web/sferadeyatelnosti/sfera-deyatelnosti-browse.xml"/>
+    <screen id="test2_SferaDeyatelnosti.edit"
+            template="com/company/test2/web/sferadeyatelnosti/sfera-deyatelnosti-edit.xml"/>
+    <screen id="test2_MestaRaboti.browse" template="com/company/test2/web/mestaraboti/mesta-raboti-browse.xml"/>
+    <screen id="test2_MestaRaboti.edit" template="com/company/test2/web/mestaraboti/mesta-raboti-edit.xml"/>
+    <screen id="test2_Otrasli.browse" template="com/company/test2/web/otrasli/otrasli-browse.xml"/>
+    <screen id="test2_Otrasli.edit" template="com/company/test2/web/otrasli/otrasli-edit.xml"/>
+    <screen id="test2_Delo.browse" template="com/company/test2/web/delo/delo-browse.xml"/>
+    <screen id="test2_Delo.edit" template="com/company/test2/web/delo/delo-edit.xml"/>
+    <screen id="test2_DokumentiPoNagragdeniyu.browse"
+            template="com/company/test2/web/dokumentiponagragdeniyu/dokumenti-po-nagragdeniyu-browse.xml"/>
+    <screen id="test2_DokumentiPoNagragdeniyu.edit"
+            template="com/company/test2/web/dokumentiponagragdeniyu/dokumenti-po-nagragdeniyu-edit.xml"/>
+    <screen id="test2_VidNagradi.browse" template="com/company/test2/web/vidnagradi/vid-nagradi-browse.xml"/>
+    <screen id="test2_VidNagradi.edit" template="com/company/test2/web/vidnagradi/vid-nagradi-edit.xml"/>
+    <screen id="test2_PrinadlegnostNagradi.browse"
+            template="com/company/test2/web/prinadlegnostnagradi/prinadlegnost-nagradi-browse.xml"/>
+    <screen id="test2_PrinadlegnostNagradi.edit"
+            template="com/company/test2/web/prinadlegnostnagradi/prinadlegnost-nagradi-edit.xml"/>
+</screen-config>

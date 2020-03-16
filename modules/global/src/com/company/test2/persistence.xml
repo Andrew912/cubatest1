@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="test2" transaction-type="RESOURCE_LOCAL">
+
+        <class>com.company.test2.entity.KategoriiRabotnikov</class>
+        <class>com.company.test2.entity.Obrazovanie</class>
+        <class>com.company.test2.entity.TipiNagrad</class>
+        <class>com.company.test2.entity.Korrespondent</class>
+        <class>com.company.test2.entity.VidiDokumentov</class>
+        <class>com.company.test2.entity.NagradiOblastiVruchennieGragdanam</class>
+        <class>com.company.test2.entity.Otchestva</class>
+        <class>com.company.test2.entity.Territoriya</class>
+        <class>com.company.test2.entity.PredstavlyayushieKNagrade</class>
+        <class>com.company.test2.entity.VruchayushieNagradi</class>
+        <class>com.company.test2.entity.MestaVrucheniya</class>
+        <class>com.company.test2.entity.Imena</class>
+        <class>com.company.test2.entity.TipiNagragdaemikh</class>
+        <class>com.company.test2.entity.Nagradi</class>
+        <class>com.company.test2.entity.Rezolyucii</class>
+        <class>com.company.test2.entity.SferaDeyatelnosti</class>
+        <class>com.company.test2.entity.MestaRaboti</class>
+        <class>com.company.test2.entity.Otrasli</class>
+        <class>com.company.test2.entity.Delo</class>
+        <class>com.company.test2.entity.DokumentiPoNagragdeniyu</class>
+        <class>com.company.test2.entity.VidNagradi</class>
+        <class>com.company.test2.entity.PrinadlegnostNagradi</class>
+    </persistence-unit>
+</persistence>

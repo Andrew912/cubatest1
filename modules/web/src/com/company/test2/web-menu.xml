@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
+    <menu id="application-test2" insertBefore="administration">
+        <item screen="test2_KategoriiRabotnikov.browse"/>
+        <item screen="test2_Obrazovanie.browse"/>
+        <item screen="test2_TipiNagrad.browse"/>
+        <item screen="test2_Korrespondent.browse"/>
+        <item screen="test2_VidiDokumentov.browse"/>
+        <item screen="test2_NagradiOblastiVruchennieGragdanam.browse"/>
+        <item screen="test2_Otchestva.browse"/>
+        <item screen="test2_Territoriya.browse"/>
+        <item screen="test2_PredstavlyayushieKNagrade.browse"/>
+        <item screen="test2_VruchayushieNagradi.browse"/>
+        <item screen="test2_MestaVrucheniya.browse"/>
+        <item screen="test2_Imena.browse"/>
+        <item screen="test2_TipiNagragdaemikh.browse"/>
+        <item screen="test2_Nagradi.browse"/>
+        <item screen="test2_Rezolyucii.browse"/>
+        <item screen="test2_SferaDeyatelnosti.browse"/>
+        <item screen="test2_MestaRaboti.browse"/>
+        <item screen="test2_Otrasli.browse"/>
+        <item screen="test2_Delo.browse"/>
+        <item screen="test2_DokumentiPoNagragdeniyu.browse"/>
+        <item screen="test2_VidNagradi.browse"/>
+        <item screen="test2_PrinadlegnostNagradi.browse"/>
+    </menu>
+</menu-config>

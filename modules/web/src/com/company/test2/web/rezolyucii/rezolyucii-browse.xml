@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.test2.web.rezolyucii.RezolyuciiBrowse"
+        focusComponent="rezolyuciisTable"
+        lookupComponent="rezolyuciisTable"
+        messagesPack="com.company.test2.web.rezolyucii">
+    <dsContext>
+        <collectionDatasource id="rezolyuciisDs"
+                              class="com.company.test2.entity.Rezolyucii"
+                              view="_local">
+            <query>
+                <![CDATA[select e from test2_Rezolyucii e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="rezolyuciisTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="rezolyuciisTable"
+                datasource="rezolyuciisDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="rezolyuciisTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="datasetNo"/>
+                <column id="namo"/>
+                <column id="versionNo"/>
+            </columns>
+            <rows datasource="rezolyuciisDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="rezolyuciisTable.create"/>
+                <button id="editBtn" action="rezolyuciisTable.edit"/>
+                <button id="removeBtn" action="rezolyuciisTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

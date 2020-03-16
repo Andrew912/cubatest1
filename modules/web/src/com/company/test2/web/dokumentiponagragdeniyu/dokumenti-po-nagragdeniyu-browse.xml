@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.test2.web.dokumentiponagragdeniyu.DokumentiPoNagragdeniyuBrowse"
+        focusComponent="dokumentiPoNagragdeniyusTable"
+        lookupComponent="dokumentiPoNagragdeniyusTable"
+        messagesPack="com.company.test2.web.dokumentiponagragdeniyu">
+    <dsContext>
+        <collectionDatasource id="dokumentiPoNagragdeniyusDs"
+                              class="com.company.test2.entity.DokumentiPoNagragdeniyu"
+                              view="_local">
+            <query>
+                <![CDATA[select e from test2_DokumentiPoNagragdeniyu e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="dokumentiPoNagragdeniyusTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="dokumentiPoNagragdeniyusTable"
+                datasource="dokumentiPoNagragdeniyusDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="dokumentiPoNagragdeniyusTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="adresatIskhodyashego"/>
+                <column id="dataDokumentaONagragdenii"/>
+                <column id="dataIskhodyashego"/>
+                <column id="dataPodpisaniyaGubernatorom"/>
+                <column id="dataPostanovleniyaOms"/>
+                <column id="dataRassmotreniyaKomissiey"/>
+                <column id="dataSoprovoditelnogoPisma"/>
+                <column id="dataVozvrataIzPodrazdeleniy"/>
+                <column id="dataVrucheniyaNagradi"/>
+                <column id="datasetNo"/>
+                <column id="dopolnitelniyNomer"/>
+                <column id="dopolnitelniySrokIspolneniya"/>
+                <column id="ispolnitel"/>
+                <column id="nagragdaemiy"/>
+                <column id="nomerDokumentaONagragdenii"/>
+                <column id="nomerIskhodyashego"/>
+                <column id="nomerPostanovleniyaOms"/>
+                <column id="nomerSoprovoditelnogoPisma"/>
+                <column id="otkaz"/>
+                <column id="podpisavshiySoprovoditelnoePismo"/>
+                <column id="primechanie"/>
+                <column id="primechanieIskhodyashego"/>
+                <column id="reshenieKomissii"/>
+                <column id="soderganie"/>
+                <column id="srokIspolneniya"/>
+                <column id="versionNo"/>
+                <column id="vkhodyashayaData"/>
+                <column id="vkhodyashiyNomer"/>
+                <column id="zaslugi"/>
+            </columns>
+            <rows datasource="dokumentiPoNagragdeniyusDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="dokumentiPoNagragdeniyusTable.create"/>
+                <button id="editBtn" action="dokumentiPoNagragdeniyusTable.edit"/>
+                <button id="removeBtn" action="dokumentiPoNagragdeniyusTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.test2.web.predstavlyayushieknagrade.PredstavlyayushieKNagradeBrowse"
+        focusComponent="predstavlyayushieKNagradesTable"
+        lookupComponent="predstavlyayushieKNagradesTable"
+        messagesPack="com.company.test2.web.predstavlyayushieknagrade">
+    <dsContext>
+        <collectionDatasource id="predstavlyayushieKNagradesDs"
+                              class="com.company.test2.entity.PredstavlyayushieKNagrade"
+                              view="_local">
+            <query>
+                <![CDATA[select e from test2_PredstavlyayushieKNagrade e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="predstavlyayushieKNagradesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="predstavlyayushieKNagradesTable"
+                datasource="predstavlyayushieKNagradesDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="predstavlyayushieKNagradesTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="datasetNo"/>
+                <column id="namo"/>
+                <column id="versionNo"/>
+            </columns>
+            <rows datasource="predstavlyayushieKNagradesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="predstavlyayushieKNagradesTable.create"/>
+                <button id="editBtn" action="predstavlyayushieKNagradesTable.edit"/>
+                <button id="removeBtn" action="predstavlyayushieKNagradesTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

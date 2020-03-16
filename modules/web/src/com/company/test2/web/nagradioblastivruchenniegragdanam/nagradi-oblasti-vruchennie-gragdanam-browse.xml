@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.test2.web.nagradioblastivruchenniegragdanam.NagradiOblastiVruchennieGragdanamBrowse"
+        focusComponent="nagradiOblastiVruchennieGragdanamsTable"
+        lookupComponent="nagradiOblastiVruchennieGragdanamsTable"
+        messagesPack="com.company.test2.web.nagradioblastivruchenniegragdanam">
+    <dsContext>
+        <collectionDatasource id="nagradiOblastiVruchennieGragdanamsDs"
+                              class="com.company.test2.entity.NagradiOblastiVruchennieGragdanam"
+                              view="_local">
+            <query>
+                <![CDATA[select e from test2_NagradiOblastiVruchennieGragdanam e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="nagradiOblastiVruchennieGragdanamsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="nagradiOblastiVruchennieGragdanamsTable"
+                datasource="nagradiOblastiVruchennieGragdanamsDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="nagradiOblastiVruchennieGragdanamsTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="dataPostanovleniya"/>
+                <column id="dataVrucheniyaNagradi"/>
+                <column id="datasetNo"/>
+                <column id="dolgnost"/>
+                <column id="familiya"/>
+                <column id="mestoRabotiTogda"/>
+                <column id="nomerPostanovleniya"/>
+                <column id="obektVrucheniya"/>
+                <column id="versionNo"/>
+                <column id="zaslugi"/>
+            </columns>
+            <rows datasource="nagradiOblastiVruchennieGragdanamsDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="nagradiOblastiVruchennieGragdanamsTable.create"/>
+                <button id="editBtn" action="nagradiOblastiVruchennieGragdanamsTable.edit"/>
+                <button id="removeBtn" action="nagradiOblastiVruchennieGragdanamsTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

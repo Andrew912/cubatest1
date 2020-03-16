@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.test2.web.otchestva.OtchestvaBrowse"
+        focusComponent="otchestvasTable"
+        lookupComponent="otchestvasTable"
+        messagesPack="com.company.test2.web.otchestva">
+    <dsContext>
+        <collectionDatasource id="otchestvasDs"
+                              class="com.company.test2.entity.Otchestva"
+                              view="_local">
+            <query>
+                <![CDATA[select e from test2_Otchestva e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="otchestvasTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="otchestvasTable"
+                datasource="otchestvasDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="otchestvasTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="datasetNo"/>
+                <column id="namo"/>
+                <column id="versionNo"/>
+            </columns>
+            <rows datasource="otchestvasDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="otchestvasTable.create"/>
+                <button id="editBtn" action="otchestvasTable.edit"/>
+                <button id="removeBtn" action="otchestvasTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

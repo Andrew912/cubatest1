@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.test2.web.vididokumentov.VidiDokumentovBrowse"
+        focusComponent="vidiDokumentovsTable"
+        lookupComponent="vidiDokumentovsTable"
+        messagesPack="com.company.test2.web.vididokumentov">
+    <dsContext>
+        <collectionDatasource id="vidiDokumentovsDs"
+                              class="com.company.test2.entity.VidiDokumentov"
+                              view="_local">
+            <query>
+                <![CDATA[select e from test2_VidiDokumentov e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="vidiDokumentovsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="vidiDokumentovsTable"
+                datasource="vidiDokumentovsDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="vidiDokumentovsTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="datasetNo"/>
+                <column id="namo"/>
+                <column id="versionNo"/>
+            </columns>
+            <rows datasource="vidiDokumentovsDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="vidiDokumentovsTable.create"/>
+                <button id="editBtn" action="vidiDokumentovsTable.edit"/>
+                <button id="removeBtn" action="vidiDokumentovsTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

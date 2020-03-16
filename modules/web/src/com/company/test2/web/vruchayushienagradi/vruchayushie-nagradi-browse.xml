@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.test2.web.vruchayushienagradi.VruchayushieNagradiBrowse"
+        focusComponent="vruchayushieNagradisTable"
+        lookupComponent="vruchayushieNagradisTable"
+        messagesPack="com.company.test2.web.vruchayushienagradi">
+    <dsContext>
+        <collectionDatasource id="vruchayushieNagradisDs"
+                              class="com.company.test2.entity.VruchayushieNagradi"
+                              view="_local">
+            <query>
+                <![CDATA[select e from test2_VruchayushieNagradi e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="vruchayushieNagradisTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="vruchayushieNagradisTable"
+                datasource="vruchayushieNagradisDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="vruchayushieNagradisTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="datasetNo"/>
+                <column id="namo"/>
+                <column id="versionNo"/>
+            </columns>
+            <rows datasource="vruchayushieNagradisDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="vruchayushieNagradisTable.create"/>
+                <button id="editBtn" action="vruchayushieNagradisTable.edit"/>
+                <button id="removeBtn" action="vruchayushieNagradisTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

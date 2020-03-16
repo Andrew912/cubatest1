@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.test2.web.obrazovanie.ObrazovanieBrowse"
+        focusComponent="obrazovaniesTable"
+        lookupComponent="obrazovaniesTable"
+        messagesPack="com.company.test2.web.obrazovanie">
+    <dsContext>
+        <collectionDatasource id="obrazovaniesDs"
+                              class="com.company.test2.entity.Obrazovanie"
+                              view="_local">
+            <query>
+                <![CDATA[select e from test2_Obrazovanie e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="obrazovaniesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="obrazovaniesTable"
+                datasource="obrazovaniesDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="obrazovaniesTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="datasetNo"/>
+                <column id="namo"/>
+                <column id="versionNo"/>
+            </columns>
+            <rows datasource="obrazovaniesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="obrazovaniesTable.create"/>
+                <button id="editBtn" action="obrazovaniesTable.edit"/>
+                <button id="removeBtn" action="obrazovaniesTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>
